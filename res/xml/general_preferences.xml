@@ -20,12 +20,17 @@
         android:key="homepage_picker"
         android:entries="@array/pref_homepage_choices"
         android:entryValues="@array/pref_homepage_values"
+        android:background="@color/primary"
+
         android:title="@string/pref_content_homepage" />
 
-    <CheckBoxPreference android:key="autofill_enabled"
-        android:title="@string/pref_autofill_enabled"
-        android:summary="@string/pref_autofill_enabled_summary"
-        android:defaultValue="true"
+    <PreferenceCategory android:title="@string/pref_general_autofill_title">
+        <SwitchPreference android:key="autofill_enabled"
+            android:title="@string/pref_autofill_enabled"
+            android:summary="@string/pref_autofill_enabled_summary"
+            android:defaultValue="true"
         />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

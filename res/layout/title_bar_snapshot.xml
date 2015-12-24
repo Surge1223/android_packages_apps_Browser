@@ -57,14 +57,14 @@
         android:id="@+id/tab_switcher"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:src="@drawable/ic_windows"
+        android:src="@drawable/ic_windows_dark"
         android:contentDescription="@string/accessibility_button_navscreen"
-        style="@style/BrowserButton" />
+        style="@style/HoloButton" />
     <ImageButton
         android:id="@+id/more"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        style="@style/BrowserButton"
+        style="@style/HoloButton"
         android:gravity="center_vertical"
         android:src="@*android:drawable/ic_menu_moreoverflow_normal_holo_dark"
         android:contentDescription="@string/accessibility_button_more" />

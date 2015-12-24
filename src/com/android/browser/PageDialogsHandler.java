@@ -17,11 +17,13 @@
 package com.android.browser;
 
 import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.net.http.SslCertificate;
 import android.net.http.SslError;
+import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.webkit.HttpAuthHandler;
@@ -29,7 +31,6 @@ import android.webkit.SslErrorHandler;
 import android.webkit.WebView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 /**
  * Displays page info
  *
@@ -332,6 +333,8 @@ public class PageDialogsHandler {
                 .show();
     }
 
+
+
     /*
      * Creates an AlertDialog to display the given certificate. If error is
      * null, text is added to state that the certificae is valid and the icon
@@ -341,11 +344,15 @@ public class PageDialogsHandler {
      */
     private AlertDialog.Builder createSslCertificateDialog(SslCertificate certificate,
             SslError error) {
-        View certificateView = certificate.inflateCertificateView(mContext);
+
+        LayoutInflater factory = LayoutInflater.from(mContext);
+        View certificateView = factory.inflate(
+            R.layout.ssl_success, null);
+
         final LinearLayout placeholder =
                 (LinearLayout)certificateView.findViewById(com.android.internal.R.id.placeholder);
 
-        LayoutInflater factory = LayoutInflater.from(mContext);
+
         int iconId;
 
         if (error == null) {

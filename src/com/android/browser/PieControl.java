@@ -269,7 +269,7 @@ public class PieControl implements PieMenu.PieController, OnClickListener {
         mTabsCount = (TextView) v.findViewById(R.id.label);
         mTabsCount.setText("1");
         ImageView image = (ImageView) v.findViewById(R.id.icon);
-        image.setImageResource(R.drawable.ic_windows);
+        image.setImageResource(R.drawable.ic_windows_dark);
         image.setScaleType(ScaleType.CENTER);
         LayoutParams lp = new LayoutParams(mItemSize, mItemSize);
         v.setLayoutParams(lp);

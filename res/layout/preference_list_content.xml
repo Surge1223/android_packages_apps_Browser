@@ -20,6 +20,8 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0px"
+        android:background="@color/primary"
+        android:textColor="@android:color/holo_blue_dark"
         android:layout_weight="1">
 
         <LinearLayout
